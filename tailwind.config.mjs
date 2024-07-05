@@ -1,4 +1,7 @@
 import animations from 'tailwindcss-animated'
+import tlwforms from '@tailwindcss/forms'
+import tlwtypography from '@tailwindcss/typography'
+import tlwaspectratio from '@tailwindcss/aspect-ratio'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,5 +9,5 @@ export default {
 	theme: {
 		extend: {},
 	},
-	plugins: [animations],
+	plugins: [animations, tlwforms, tlwtypography, tlwaspectratio],
 }
