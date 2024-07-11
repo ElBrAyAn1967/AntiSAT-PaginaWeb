@@ -1,0 +1,63 @@
+---
+import "@fontsource-variable/onest";
+import "@fontsource-variable/open-sans";
+
+const images = [
+  "/Slider/1.jpg",
+  "/Slider/2.jpg",
+  "/Slider/3.jpg",
+  "/Slider/4.jpg",
+  "/Slider/5.jpg",
+  "/Slider/6.jpg",
+  "/Slider/7.jpg",
+  "/Slider/1.jpg",
+  "/Slider/2.jpg",
+  "/Slider/3.jpg",
+  "/Slider/4.jpg",
+  "/Slider/5.jpg",
+  "/Slider/6.jpg",
+  "/Slider/7.jpg",
+];
+---
+<!--MODIFICAR POSICION PARA QUE ESTE ABAJO DEL MENU  -->
+<!--MODIFICIAR EL TAMAÑO DEL CARRUSEL  MAS ALARGADO -->
+<!-- MODFICAR ESTILOS EN GENERAL  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="w-[99vw] mx-auto overflow-hidden relative">
+      <div class="absolute top-0 bottom-0 left-0 w-[50px] bg-gradient-to-r from-gray-800 to-transparent z-10"></div>
+      <div class="absolute top-0 bottom-0 right-0 w-[50px] bg-gradient-to-l from-gray-800 to-transparent z-10"></div>
+      <div class="flex animate-scroll w-[calc(200px*14)]">
+        {images.map((src, index) => (
+          <div class="w-[200px] transition-opacity duration-500 ease-in-out opacity-100 hover:opacity-50">
+            <img src={src} alt={`Slide ${index + 1}`} class="w-full" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-200px * 7));
+      transform: translateX(calc(-200px * 7));
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+  }
+</style>
