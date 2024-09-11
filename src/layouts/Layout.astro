@@ -31,24 +31,67 @@ const {currentLocale} =Astro
 	}
 	html {
 		font-family:'Onest Variable', system-ui, sans-serif;
-		background: #111e31;
-
-
-		
+		background: #111e31;		
 	}
 	p{
 		color: rgba(255, 255, 255, 0.9);
 		line-height: 1.4;
 		margin-bottom: 1em;
-
 		font-weight: 100;
 		font-size: 1em;
 		letter-spacing: .5px;
 	}
 	p strong{
-	color: wheat;
-	font-weight: 700;
-
+		color: wheat;
+		font-weight: 700;
+	}
+	/*Configuraciones predeterminadas  */
+	/*Boton*/
+	button{
+		color: rgb(255 255 255);
+		background-color: rgb(29 78 216);
+		padding-top: 0.625rem; /* 2.5 * 0.25rem = 0.625rem */
+        padding-bottom: 0.625rem; /* 2.5 * 0.25rem = 0.625rem */
+		font-size: 0.875rem /* 14px */;
+        line-height: 1.25rem /* 20px */;
+		padding-left: 1.25rem /* 20px */;
+        padding-right: 1.25rem /* 20px */;
+		border-radius: 0.5rem; /* rounded-lg */
+	}
+	button:hover{
+		background-color: rgb(30 64 175);
+	}
+	button:focus {
+    	box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.5); /* blue-300 */
+    }
+	/*ESTILOS DEL INPUT */
+	/*CHECAR LOS ESTILOS DEL INPUT CUALES SON LOS QUE SON NECESARIOS Y POR QUE NO FUNCIONAN  */
+	input{
+		color: #111827; /* gray-900 */
+		border-color: #185abe; /* gray-300 */
+		border: 1px solid #d1d5db; /* gray-300 */
+		padding-top: 0.625rem; /* 2.5 * 0.25rem = 0.625rem */
+        padding-bottom: 0.625rem; /* 2.5 * 0.25rem = 0.625rem */
+		padding-left: 0; /* px-0 */
+        padding-right: 0; /* px-0 */
+		font-size: 0.875rem /* 14px */;
+        line-height: 1.25rem /* 20px */;
+	}
+	input:focus {
+  		border-color: #2563eb; /* blue-600 */
+	}
+	/*ESTILOS LABEL */
+	input:focus ~ label {
+    	color: #2563eb; /* blue-600 */
+    }
+	label{
+		color: rgb(107 114 128);
+		font-size: 0.875rem /* 14px */;
+        line-height: 1.25rem /* 20px */;
+		top: 0.75rem /* 12px */;		
+	}
+	a:hover{
+		text-decoration: none;
 	}
 	#header-nav {
 
