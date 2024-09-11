@@ -3,28 +3,35 @@ import "@fontsource-variable/onest";
 import "@fontsource-variable/open-sans";
 const images = [
   "/Slider/LOGOS/PNG/Ethereum Mexico.png",
-  "/Slider/LOGOS/PNG/Lock-up_Colour.png",
-  "/Slider/LOGOS/PNG/Lock-up_White.png",
+  "/Slider/LOGOS/PNG/Lock-up_Colour.png",  
   "/Slider/LOGOS/PNG/Logo-Merch30.png",
   "/Slider/LOGOS/SVG/CripTEC-logo-HOR-WHITE.svg",
+  "/Slider/LOGOS/PNG/Lock-up_White.png",
   "/Slider/LOGOS/SVG/nouns.svg",
   "/Slider/LOGOS/SVG/vara-logo-white.svg",
+
+
+
   "/Slider/LOGOS/PNG/Ethereum Mexico.png",
   "/Slider/LOGOS/PNG/Lock-up_Colour.png",
-  "/Slider/LOGOS/PNG/Lock-up_White.png",
   "/Slider/LOGOS/PNG/Logo-Merch30.png",
   "/Slider/LOGOS/SVG/CripTEC-logo-HOR-WHITE.svg",
   "/Slider/LOGOS/SVG/nouns.svg",
+  "/Slider/LOGOS/PNG/Lock-up_White.png",
   "/Slider/LOGOS/SVG/vara-logo-white.svg",
 ];
 ---
-<!-- MODIFICAR POSICION PARA QUE ESTE ABAJO DEL MENU -->
-<!-- MODIFICAR EL TAMAÑO DEL CARRUSEL MAS ALARGADO -->
-<!-- MODIFICAR ESTILOS EN GENERAL -->
-
+<!--INSERTAR LOGO DE TRUSTWALLET -->
+<!--DIVICION EXTERIOR  -->
+<div class=" "><!--RESPONSIVIDAD -->
+  <!--MODIFICACION DE LA CAJA INTERNA  -->
 <div class="w-[99vw] mx-auto overflow-hidden relative">
+  <!--LATERALES TRASNPARENTES , PANTALLA DE HUMO -->
   <div class="absolute top-0 bottom-0 left-0 w-[50px] bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
   <div class="absolute top-0 bottom-0 right-0 w-[50px] bg-gradient-to-l from-gray-900 to-transparent z-10"></div>
+  <!--CIERRE DE PANTALLA DE HUMO -->
+ 
+ <!--ANIMACION DE MOVIMIENTO  INFINITO -->
   <div class="flex animate-scroll w-[calc(200px*14)] gap-16 items-center justify-center">
     {images.map((src, index) => (
       <div class="w-[200px] transition-opacity duration-500 ease-in-out opacity-100 hover:opacity-50">
@@ -32,8 +39,12 @@ const images = [
       </div>
     ))}
   </div>
-</div>
 
+
+
+  </div>
+</div>
+<!--ESTILOS DE MI  SLITE DE MOVIMIENTO  -->
 <style is:global>
   @keyframes scroll {
     0% {
@@ -45,9 +56,9 @@ const images = [
       transform: translateX(calc(-200px * 7));
     }
   }
-
   .animate-scroll {
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;
   }
 </style>
+<!--CIERRE DE ANIMACION DE MOVIMIENTO -->
