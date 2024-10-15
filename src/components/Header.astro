@@ -26,9 +26,16 @@
 
     <!-- Botón del menú móvil (visible en pantallas pequeñas, al lado derecho) -->
     <div class="lg:hidden flex-shrink-0">
-      <a id="menu-toggle" class="flex items-center justify-center text-white">
-        <span class="material-icons">menu</span>
-      </a>
+   
+      <a id="menu-toggle" class="flex items-center space-x-3 rtl:space-x-reverse text-white">
+        <!-- Icono de menú hamburguesa con animación -->
+        <svg id="menu-icon" class="w-6 h-6 text-gray-500 dark:text-gray-400 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path id="line1" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16" />
+          <path id="line2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+          <path id="line3" stroke-linecap="round" stroke-linejoin="round" d="M4 18h16" />
+        </svg>
+    </a>
+    
     </div>
   </div>
 
@@ -57,6 +64,28 @@
       });
     }
   });
+  const menuToggle = document.getElementById('menu-toggle');
+const menuIcon = document.getElementById('menu-icon');
+const line1 = document.getElementById('line1');
+const line2 = document.getElementById('line2');
+const line3 = document.getElementById('line3');
+
+// Verifica que todos los elementos existan
+if (menuToggle && line1 && line2 && line3) {
+  menuToggle.addEventListener('click', () => {
+    // Alternar clases de animación
+    line1.classList.toggle('rotate-45');
+    line1.classList.toggle('translate-y-[10px]');
+    
+    line2.classList.toggle('opacity-0');
+    
+    line3.classList.toggle('-rotate-45');
+    line3.classList.toggle('-translate-y-[10px]');
+  });
+}
+
+
+  
 </script>
 
 
