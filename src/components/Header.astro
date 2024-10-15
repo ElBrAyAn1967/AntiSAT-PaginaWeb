@@ -1,7 +1,25 @@
-<header id="header-nav" class="fixed w-[99vw] py-3 z-10 top-0 px-8 lg:px-0"> 
-  <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between"> 
-  <!--<div class="w-full h-auto">-->
-  <!--   <img src="/ANTISAT-Logo-outlineWhite.svg" class="col-span-1 w-28 mx-4  p-2">-->
+---
+const { title } = Astro.props;
+---
+<header id="header-nav" class="fixed w-[99vw] h-auto py-3 z-10 px-8 lg:px-0"> 
+    <div class="grid grid-cols-3 max-w-7xl  mx-auto items-center justify-between"> 
+     <div class="col-span-1 ">
+       <img src="/CripTEC-logo-HOR-WHITE.svg" class="col-span-1 w-36">
+      </div>
+      <div class="col-span-1 ">
+        <nav>
+          <ul class="flex gap-4 justify-center">
+            <li><a class="hover:underline" href="#">Criptec</a></li>
+            <li><a class="hover:underline" href="#">Cursos</a></li>
+            <li><a class="hover:underline" href="#">Eventos</a></li>
+            <li><a class="hover:underline" href="#">Vara</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-span-1  flex justify-end">
+        <a href="#" class="border rounded-lg inline-block border-white px-4 py-1 hover:bg-white hover:text-black duration-300">
+          Connect Wallet
+        </a>
 
 
 
@@ -9,19 +27,37 @@
 
 
 
-  
-  <img src="/ANTISAT-Logo-outlineWhite.svg" class="col-span-1 w-28 ">
-  </a>
-  <nav class=" col-span-1 justify-self-center">
-  <ul class="flex gap-4">
-  <li><a   href="#">CripTec</a></li>
-  <li><a  href="#">Galeria</a></li>
-  <li><a  href="#">Futuros</a></li>
-  <li><a  href="#">Vara</a></li>
-</ul>
-  </nav>
-  <a href="#" class="border rounded-full inline-block border-white px-4 py-2 justify-self-end hover:bg-white hover:text-black duration-300">
-    Login
-  </a> 
+    <!-- Botón del menú móvil (visible en pantallas pequeñas) -->
+    <a id="menu-toggle" class="lg:hidden flex items-center justify-center text-white">
+      <span class="material-icons">menu</span>
+    </a>
   </div>
-  </header>
+  <!-- Menú móvil (inicialmente oculto) -->
+  <div id="mobile-menu" class="hidden lg:hidden flex-col items-center bg-black text-white absolute w-full top-full mt-2">
+    <ul class="flex flex-col items-center gap-4 py-4">
+      <li><a href="#" class="hover:text-gray-300">CripTec</a></li>
+      <li><a href="#" class="hover:text-gray-300">Cursos</a></li>
+      <li><a href="#" class="hover:text-gray-300">Futuros</a></li>
+      <li><a href="#" class="hover:text-gray-300">Vara</a></li>
+      <li><a href="#" class="border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black duration-300">Login</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle'); // Botón para abrir el menú
+    const mobileMenu = document.getElementById('mobile-menu'); // Menú móvil
+    // Verificar que ambos elementos existen
+    if (menuToggle && mobileMenu) {
+      // Alternar visibilidad del menú móvil
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+      });
+    }
+  });
+</script>
+
+

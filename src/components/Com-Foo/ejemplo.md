@@ -15,9 +15,9 @@
               </ul>
           </div>
           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
-          <div class="flex items-center justify-between flex-nowrap">
+          <div class="grid grid-cols-2">
               <div class="flex justify-start">
-                  <span class="flex text-xs md:text-sm text-gray-500 dark:text-gray-400">©2024 <a class="hover:underline">CripTec</a>.</span>
+                  <span class="block text-xs md:text-sm text-gray-500 dark:text-gray-400">©2024 <a class="hover:underline">CripTec</a>.</span>
               </div>
               <div class="flex mt-4 sm:mt-0 justify-end">
                   <!-- Social media links -->
