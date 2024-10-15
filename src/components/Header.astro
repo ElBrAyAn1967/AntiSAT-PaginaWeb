@@ -26,66 +26,51 @@
 
     <!-- Botón del menú móvil (visible en pantallas pequeñas, al lado derecho) -->
     <div class="lg:hidden flex-shrink-0">
-   
-      <a id="menu-toggle" class="flex items-center space-x-3 rtl:space-x-reverse text-white">
+      <a id="menu-toggle" class="flex items-center space-x-3 rtl:space-x-reverse">
         <!-- Icono de menú hamburguesa con animación -->
-        <svg id="menu-icon" class="w-6 h-6 text-gray-500 dark:text-gray-400 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path id="line1" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16" />
-          <path id="line2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
-          <path id="line3" stroke-linecap="round" stroke-linejoin="round" d="M4 18h16" />
+        <svg id="menu-icon" class="w-6 h-6 text-white transition-all duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path id="line1" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16" />
+            <path id="line2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+            <path id="line3" stroke-linecap="round" stroke-linejoin="round" d="M4 18h16" />
         </svg>
-    </a>
-    
+      </a>
     </div>
   </div>
 
   <!-- Menú móvil (inicialmente oculto) -->
-  <div id="mobile-menu" class="hidden lg:hidden flex-col items-center bg-black text-white absolute w-full top-full mt-2">
-    <ul class="flex flex-col items-center gap-4 py-4">
-      <li><a href="#" class="hover:text-gray-300">CripTec</a></li>
-      <li><a href="#" class="hover:text-gray-300">Cursos</a></li>
-      <li><a href="#" class="hover:text-gray-300">Futuros</a></li>
-      <li><a href="#" class="hover:text-gray-300">Vara</a></li>
-      <li><a href="#" class="border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black duration-300">Login</a></li>
+  <div id="mobile-menu" class="hidden lg:hidden flex-col items-start bg-black/60 text-white absolute w-full top-full left-0 border-t border-gray-700 backdrop-blur-lg shadow-xl transition-all duration-300">
+    <ul class="flex flex-col w-full gap-4 py-4">
+      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">CripTec</a></li>
+      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Cursos</a></li>
+      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Futuros</a></li>
+      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Vara</a></li>
+      <li><a href="#" class="block w-full border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black duration-300">Login</a></li>
     </ul>
   </div>
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menu-toggle'); // Botón para abrir el menú
-    const mobileMenu = document.getElementById('mobile-menu'); // Menú móvil
-    // Verificar que ambos elementos existen
-    if (menuToggle && mobileMenu) {
-      // Alternar visibilidad del menú móvil
-      menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex');
-      });
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    const line3 = document.getElementById('line3');
+
+    if (menuToggle && mobileMenu && line1 && line2 && line3) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+
+            // Alternar clases para la animación del menú
+            line1.classList.toggle('rotate-45');
+            line1.classList.toggle('translate-y-[6px]'); // Ajuste más preciso
+            
+            line2.classList.toggle('opacity-0');
+            
+            line3.classList.toggle('-rotate-45');
+            line3.classList.toggle('-translate-y-[6px]'); // Ajuste más preciso
+        });
     }
-  });
-  const menuToggle = document.getElementById('menu-toggle');
-const menuIcon = document.getElementById('menu-icon');
-const line1 = document.getElementById('line1');
-const line2 = document.getElementById('line2');
-const line3 = document.getElementById('line3');
-
-// Verifica que todos los elementos existan
-if (menuToggle && line1 && line2 && line3) {
-  menuToggle.addEventListener('click', () => {
-    // Alternar clases de animación
-    line1.classList.toggle('rotate-45');
-    line1.classList.toggle('translate-y-[10px]');
-    
-    line2.classList.toggle('opacity-0');
-    
-    line3.classList.toggle('-rotate-45');
-    line3.classList.toggle('-translate-y-[10px]');
-  });
-}
-
-
-  
+});
 </script>
-
-
