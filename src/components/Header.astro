@@ -1,37 +1,37 @@
----
-const { title } = Astro.props;
----
-<header id="header-nav" class="fixed w-[99vw] h-auto py-3 z-10 px-8 lg:px-0"> 
-    <div class="grid grid-cols-3 max-w-7xl  mx-auto items-center justify-between"> 
-     <div class="col-span-1 ">
-       <img src="/CripTEC-logo-HOR-WHITE.svg" class="col-span-1 w-36">
-      </div>
-      <div class="col-span-1 ">
-        <nav>
-          <ul class="flex gap-4 justify-center">
-            <li><a class="hover:underline" href="#">Criptec</a></li>
-            <li><a class="hover:underline" href="#">Cursos</a></li>
-            <li><a class="hover:underline" href="#">Eventos</a></li>
-            <li><a class="hover:underline" href="#">Vara</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="col-span-1  flex justify-end">
-        <a href="#" class="border rounded-lg inline-block border-white px-4 py-1 hover:bg-white hover:text-black duration-300">
-          Connect Wallet
-        </a>
+<header id="header-nav" class="fixed w-[99vw] h-auto py-3 z-10 px-8 lg:px-0">
+  <div class="flex items-center justify-between max-w-7xl mx-auto">
+    <!-- Logotipo (siempre visible) -->
+    <div class="flex-shrink-0">
+      <img src="/CripTEC-logo-HOR-WHITE.svg" class="w-36">
+    </div>
 
+    <!-- Navegación (oculta en móviles, visible en pantallas grandes) -->
+    <div class="hidden lg:flex">
+      <nav>
+        <ul class="flex gap-4 justify-center">
+          <li><a class="hover:underline" href="#">CripTec</a></li>
+          <li><a class="hover:underline" href="#">Cursos</a></li>
+          <li><a class="hover:underline" href="#">Eventos</a></li>
+          <li><a class="hover:underline" href="#">Vara</a></li>
+        </ul>
+      </nav>
+    </div>
 
+    <!-- Botón Connect Wallet (visible solo en pantallas grandes) -->
+    <div class="hidden lg:flex justify-end">
+      <a href="#" class="border rounded-lg inline-block border-white px-4 py-1 hover:bg-white hover:text-black duration-300">
+        Connect Wallet
+      </a>
+    </div>
 
-
-
-
-
-    <!-- Botón del menú móvil (visible en pantallas pequeñas) -->
-    <a id="menu-toggle" class="lg:hidden flex items-center justify-center text-white">
-      <span class="material-icons">menu</span>
-    </a>
+    <!-- Botón del menú móvil (visible en pantallas pequeñas, al lado derecho) -->
+    <div class="lg:hidden flex-shrink-0">
+      <a id="menu-toggle" class="flex items-center justify-center text-white">
+        <span class="material-icons">menu</span>
+      </a>
+    </div>
   </div>
+
   <!-- Menú móvil (inicialmente oculto) -->
   <div id="mobile-menu" class="hidden lg:hidden flex-col items-center bg-black text-white absolute w-full top-full mt-2">
     <ul class="flex flex-col items-center gap-4 py-4">
@@ -43,7 +43,6 @@ const { title } = Astro.props;
     </ul>
   </div>
 </header>
-
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
