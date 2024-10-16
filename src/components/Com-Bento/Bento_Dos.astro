@@ -1,23 +1,31 @@
 ---
 import BentoItem from './BentoItem.astro';
 ---
-
-<section class="w-full max-w-[1400px] grid grid-cols-10 gap-4 mx-auto p-20">
+<section class="w-full max-w-[1400px] mx-auto p-4 sm:p-10 md:p-20 grid grid-cols-10 gap-4">
 
   <!-- Elemento de imagen -->
   <BentoItem class="col-span-10 md:col-span-6" title="IMAGEN" subtitle="Descripción de la imagen">
-    <div slot="image" class="absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-transform duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blue-950 -z-10" 
+    <!-- Imagen para Móviles -->
+    <div slot="image" 
+         class="relative w-full h-[300px] sm:h-[400px] md:hidden group-hover:scale-110 transition-transform duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat" 
+         style="background-image: url('/Img-Bento/2.svg')">
+    </div>
+
+    <!-- Imagen para Pantallas Grandes (PC) -->
+    <div slot="image" 
+         class="hidden md:block absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-transform duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blue-950 -z-10" 
          style="background-image: url('/Img-Bento/2.svg')">
     </div>
   </BentoItem>
 
   <!-- Área para información -->
   <div class="col-span-10 md:col-span-4">
-    <div class=" p-6 rounded-lg shadow-lg">
-      <h2 class="text-2xl font-bold mb-4">Información</h2>
-      <p class="text-lg mb-4">Aquí puedes poner la informacsalakjsalkjaslkjkkión que desees mostrar lakslka alkskas salkjldaskj jklaslkdsajlkads lkjadslkjadslkadsj kjladskjas lakdsjlkdsajlkds ldskjlkdasj uhfbd klsja kldjsakl kldajlask lksajdj kladsjas klsdjlkaj jkadsljdsalkj kadslj.</p>
-      <!-- Puedes añadir más contenido aquí -->
+    <div class="p-4 sm:p-6 rounded-lg shadow-lg">
+      <h2 class="text-xl sm:text-2xl font-bold mb-4">Información</h2>
+      <p class="text-sm sm:text-base md:text-lg mb-4">Aquí puedes poner la información que desees mostrar...</p>
     </div>
   </div>
 
 </section>
+
+

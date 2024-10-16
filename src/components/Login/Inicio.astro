@@ -1,0 +1,99 @@
+---
+--- 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100 font-montserrat">
+  <div class="relative flex w-[800px] h-[500px] bg-white rounded-lg overflow-hidden shadow-lg container">
+    <!-- Formulario Iniciar Sesión -->
+    <div class="w-full container-form">
+      <form class="flex flex-col items-center justify-center h-full sign-in">
+        <h2 class="text-2xl mb-5">Iniciar Sesión</h2>
+        <div class="flex gap-3 mb-6 social-networks">
+          <ion-icon name="logo-twitch" class="border border-gray-300 p-2 rounded-md cursor-pointer"></ion-icon>
+          <ion-icon name="logo-twitter" class="border border-gray-300 p-2 rounded-md cursor-pointer"></ion-icon>
+          <ion-icon name="logo-instagram" class="border border-gray-300 p-2 rounded-md cursor-pointer"></ion-icon>
+          <ion-icon name="logo-tiktok" class="border border-gray-300 p-2 rounded-md cursor-pointer"></ion-icon>
+        </div>
+        <span class="text-xs mb-4">Use su correo y contraseña</span>
+        <div class="flex items-center gap-2 w-[300px] h-[40px] mb-3 bg-gray-200 px-4 container-input">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" placeholder="Email" class="bg-inherit w-full h-full outline-none">
+        </div>
+        <div class="flex items-center gap-2 w-[300px] h-[40px] mb-3 bg-gray-200 px-4 container-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" placeholder="Password" class="bg-inherit w-full h-full outline-none">
+        </div>
+        <a href="#" class="text-sm mt-2 mb-4">¿Olvidaste tu contraseña?</a>
+        <button class="bg-emerald-500 text-white rounded-lg w-[170px] h-[45px] text-sm mt-2 button">INICIAR SESIÓN</button>
+      </form>
+    </div>
+
+    <!-- Formulario Registrarse -->
+    <div class="w-full container-form">
+      <form class="flex flex-col items-center justify-center h-full sign-up">
+        <h2 class="text-2xl mb-5">Registrarse</h2>
+        <div class="flex gap-3 mb-6 social-networks">
+          <ion-icon name="logo-twitch" class="border border-gray-300 p-2 rounded-md cursor-pointer"></ion-icon>
+          <ion-icon name="logo-twitter" class="border border-gray-300 p-2 rounded-md cursor-pointer"></ion-icon>
+          <ion-icon name="logo-instagram" class="border border-gray-300 p-2 rounded-md cursor-pointer"></ion-icon>
+          <ion-icon name="logo-tiktok" class="border border-gray-300 p-2 rounded-md cursor-pointer"></ion-icon>
+        </div>
+        <span class="text-xs mb-4">Use su correo electrónico para registrarse</span>
+        <div class="flex items-center gap-2 w-[300px] h-[40px] mb-3 bg-gray-200 px-4 container-input">
+          <ion-icon name="person-outline"></ion-icon>
+          <input type="text" placeholder="Nombre" class="bg-inherit w-full h-full outline-none">
+        </div>
+        <div class="flex items-center gap-2 w-[300px] h-[40px] mb-3 bg-gray-200 px-4 container-input">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" placeholder="Email" class="bg-inherit w-full h-full outline-none">
+        </div>
+        <div class="flex items-center gap-2 w-[300px] h-[40px] mb-3 bg-gray-200 px-4 container-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" placeholder="Password" class="bg-inherit w-full h-full outline-none">
+        </div>
+        <button class="bg-emerald-500 text-white rounded-lg w-[170px] h-[45px] text-sm mt-2 button">REGISTRARSE</button>
+      </form>
+    </div>
+
+    <!-- Pantalla de bienvenida -->
+    <div class="absolute w-1/2 h-full flex items-center bg-emerald-500 transform transition-transform duration-500 ease-in-out container-welcome">
+      <div class="absolute flex flex-col items-center text-white gap-5 px-12 transition-transform duration-500 ease-in-out welcome welcome-sign-up">
+        <h3 class="text-4xl">¡Bienvenido!</h3>
+        <p class="text-center text-sm">Ingrese sus datos personales para usar todas las funciones del sitio</p>
+        <button class="border border-white bg-transparent rounded-lg w-[170px] h-[45px] text-sm button" id="btn-sign-up">Registrarse</button>
+      </div>
+      <div class="absolute flex flex-col items-center text-white gap-5 px-12 transition-transform duration-500 ease-in-out welcome welcome-sign-in">
+        <h3 class="text-4xl">¡Hola!</h3>
+        <p class="text-center text-sm">Regístrese con sus datos personales para usar todas las funciones del sitio</p>
+        <button class="border border-white bg-transparent rounded-lg w-[170px] h-[45px] text-sm button" id="btn-sign-in">Iniciar Sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector(".container");
+      const btnSignIn = document.getElementById("btn-sign-in");
+      const btnSignUp = document.getElementById("btn-sign-up");
+
+      if (btnSignIn && btnSignUp && container) {
+        btnSignIn.addEventListener("click", () => {
+          container.classList.remove("toggle");
+        });
+
+        btnSignUp.addEventListener("click", () => {
+          container.classList.add("toggle");
+        });
+      } else {
+        console.error("One or more elements are null.");
+      }
+    });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

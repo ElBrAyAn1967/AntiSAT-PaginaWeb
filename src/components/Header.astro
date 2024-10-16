@@ -12,14 +12,14 @@
           <li><a class="hover:underline" href="#">CripTec</a></li>
           <li><a class="hover:underline" href="#">Cursos</a></li>
           <li><a class="hover:underline" href="#">Eventos</a></li>
-          <li><a class="hover:underline" href="#">Vara</a></li>
+          <li><a class="hover:underline" href="#">Bruno</a></li>
         </ul>
       </nav>
     </div>
 
     <!-- Botón Connect Wallet (visible solo en pantallas grandes) -->
     <div class="hidden lg:flex justify-end">
-      <a href="#" class="border rounded-lg inline-block border-white px-4 py-1 hover:bg-white hover:text-black duration-300">
+      <a href="/src/components/Login/Inicio.astro" class="border rounded-lg inline-block border-white px-4 py-1 hover:bg-white hover:text-black duration-300">
         Connect Wallet
       </a>
     </div>
@@ -42,9 +42,9 @@
     <ul class="flex flex-col w-full gap-4 py-4">
       <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">CripTec</a></li>
       <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Cursos</a></li>
-      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Futuros</a></li>
-      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Vara</a></li>
-      <li><a href="#" class="block w-full border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black duration-300">Login</a></li>
+      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Eventos</a></li>
+      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Bruno</a></li>
+      <li><a href="/src/components/Login/Inicio.astro" class="block w-full border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black duration-300">Login</a></li>
     </ul>
   </div>
 </header>
@@ -61,13 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
-
             // Alternar clases para la animación del menú
             line1.classList.toggle('rotate-45');
             line1.classList.toggle('translate-y-[6px]'); // Ajuste más preciso
-            
             line2.classList.toggle('opacity-0');
-            
             line3.classList.toggle('-rotate-45');
             line3.classList.toggle('-translate-y-[6px]'); // Ajuste más preciso
         });
