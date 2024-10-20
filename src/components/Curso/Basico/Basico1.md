@@ -1,16 +1,15 @@
 ---
-title:Curso introductorio
-Author:Criptec
-img:ANTISAT-Logo-outlineWhite.svg
-readtime:250
-description:prueba sdakkldsalkdnsalkdnsalkdnslkandsalkn
+title: Introducción a las Criptomonedas
+Author: Criptec 
+img: ANTISAT-Logo-outlineWhite.svg
+readtime: 250
+description: Al comprender los conceptos básicos de blockchain y criptomonedas, los participantes estarán equipados con el conocimiento fundamental necesario para entender cómo funcionan las criptomonedas, qué las diferencia de las monedas tradicionales y qué tipos existen. Este conocimiento servirá como base para profundizar en aspectos más avanzados del ecosistema cripto.
  
 ---
-
-Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, un texto es un entramado de signos con una intención comunicativa que adquiere sentido en determinado contexto.
-
-Las ideas que comunica un texto están contenidas en lo que se suele denominar «macroproposiciones», unidades estructurales de nivel superior o global, que otorgan **coherencia al texto constituyendo su hilo central, el esqueleto estructural que cohesiona elementos lingüísticos formales de alto nivel, como los títulos y subtítulos**, la secuencia de párrafos, etc. En contraste, las «microproposiciones» son los elementos coadyuvantes de la cohesión de un texto, pero a nivel más particular o local. Esta distinción fue realizada por Teun van Dijk en 1980.1​
-
-El nivel microestructural o local está asociado con el concepto de cohesión. Se refiere a uno de los fenómenos **propios de la coherencia, el de las relaciones particulares** y locales que se dan entre elementos lingüísticos, tanto los que remiten unos a otros como los que tienen la función de conectar y organizar.
-
-**También es un conjunto de oraciones agrupadas en párrafos que habla de un tema determinado.**
+Conceptos Básicos de Blockchain
+Principios de blockchain: Se explorarán los fundamentos de la tecnología blockchain, cómo funciona y por qué es relevante en el contexto de las criptomonedas.
+¿Qué es una criptomoneda?: Se definirá qué son las criptomonedas, sus características y cómo se diferencian de otras formas de moneda.
+Historia y evolución de las criptomonedas: Se revisará la trayectoria histórica de las criptomonedas, desde la creación de Bitcoin hasta el surgimiento de nuevas criptomonedas y sus distintos propósitos.
+Diferencias entre criptomonedas y monedas fiduciarias: Se analizarán las características que diferencian a las criptomonedas de las monedas tradicionales emitidas por gobiernos.
+Diferencias entre criptomonedas y tokens: Se explicará la distinción entre criptomonedas y tokens, incluyendo sus distintos usos y aplicaciones en el ecosistema digital.
+Altcoins, memecoins, stablecoins: Se describirán las diferentes categorías de criptomonedas, como altcoins (criptomonedas alternativas a Bitcoin), memecoins (criptomonedas creadas con fines humorísticos) y stablecoins (criptomonedas con valor estable).

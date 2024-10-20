@@ -9,9 +9,9 @@
     <div class="hidden lg:flex">
       <nav>
         <ul class="flex gap-4 justify-center">
-          <li><a class="hover:underline" href="#">CripTec</a></li>
-          <li><a class="hover:underline" href="#">Cursos</a></li>
-          <li><a class="hover:underline" href="#">Eventos</a></li>
+          <li><a class="hover:underline" href="/CripTec">CripTec</a></li>
+          <li><a class="hover:underline" href="/Cursos">Cursos</a></li>
+          <li><a class="hover:underline" href="/Eventos">Eventos</a></li>
           <li><a class="hover:underline" href="#">Bruno</a></li>
         </ul>
       </nav>
@@ -19,7 +19,7 @@
 
     <!-- Botón Connect Wallet (visible solo en pantallas grandes) -->
     <div class="hidden lg:flex justify-end">
-      <a href="/src/components/Login/Inicio.astro" class="border rounded-lg inline-block border-white px-4 py-1 hover:bg-white hover:text-black duration-300">
+      <a href="/inicio" class="border rounded-lg inline-block border-white px-4 py-1 hover:bg-white hover:text-black duration-300">
         Connect Wallet
       </a>
     </div>
@@ -40,11 +40,11 @@
   <!-- Menú móvil (inicialmente oculto) -->
   <div id="mobile-menu" class="hidden lg:hidden flex-col items-start bg-black/60 text-white absolute w-full top-full left-0 border-t border-gray-700 backdrop-blur-lg shadow-xl transition-all duration-300">
     <ul class="flex flex-col w-full gap-4 py-4">
-      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">CripTec</a></li>
-      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Cursos</a></li>
-      <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Eventos</a></li>
+      <li><a href="/CripTec" class="block w-full px-4 py-2 hover:bg-gray-700">CripTec</a></li>
+      <li><a href="/Cursos" class="block w-full px-4 py-2 hover:bg-gray-700">Cursos</a></li>
+      <li><a href="/Eventos" class="block w-full px-4 py-2 hover:bg-gray-700">Eventos</a></li>
       <li><a href="#" class="block w-full px-4 py-2 hover:bg-gray-700">Bruno</a></li>
-      <li><a href="/src/components/Login/Inicio.astro" class="block w-full border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black duration-300">Login</a></li>
+      <li><a href="/inicio" class="block w-full border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black duration-300">Login</a></li>
     </ul>
   </div>
 </header>
